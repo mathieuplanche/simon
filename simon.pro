@@ -18,4 +18,5 @@ SOURCES += main.cpp \
 HEADERS  += lib/ui/mainwindow.h
     
 
-RESOURCES += res/simon.qrc
+RESOURCES += res/simon.qrc \
+    res/qss.qrc
