@@ -6,9 +6,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-    setAttribute(Qt::WA_DeleteOnClose) ;
-
-    QWidget* mainWidget = new QWidget ;
+    QWidget* mainWidget = new QWidget(this) ;
     setCentralWidget(mainWidget) ;
 
     QVBoxLayout* mainLayout = new QVBoxLayout ;
@@ -16,8 +14,12 @@ MainWindow::MainWindow(QWidget *parent)
 
     QHBoxLayout* playRecordArea = new QHBoxLayout ;
     mainLayout->addLayout(playRecordArea) ;
+    playButton = new QPushButton("Play") ;
+    playRecordArea->addWidget(playButton) ;
+    recordButton = new QPushButton("Record") ;
+    playRecordArea->addWidget(recordButton) ;
 
-    centralArea = new QStackedWidget() ;
+    centralArea = new QStackedWidget ;
     mainLayout->addWidget(centralArea) ;
 
     QHBoxLayout* addButtonsLayout = new QHBoxLayout ;
@@ -30,8 +32,3 @@ MainWindow::MainWindow(QWidget *parent)
     addButtonsLayout->addWidget(addBackgroundNoiseButton) ;
 }
 
-void MainWindow::closeEvent(QCloseEvent *event)
-{
-    qDebug()<<"test" ;
-    event->accept();
-}

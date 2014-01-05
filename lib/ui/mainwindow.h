@@ -15,9 +15,6 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = 0);
 
-protected:
-    void closeEvent(QCloseEvent *event);
-
 private:
     QPushButton* playButton ;
     QPushButton* recordButton ;
