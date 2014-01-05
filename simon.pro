@@ -12,8 +12,10 @@ TARGET = qt
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-    lib/ui/mainwindow.cpp \
+SOURCES += main.cpp \
+    lib/ui/mainwindow.cpp
 
 HEADERS  += lib/ui/mainwindow.h
     
+
+RESOURCES += res/simon.qrc

@@ -30,10 +30,6 @@ MainWindow::MainWindow(QWidget *parent)
     addButtonsLayout->addWidget(addBackgroundNoiseButton) ;
 }
 
-MainWindow::~MainWindow()
-{
-}
-
 void MainWindow::closeEvent(QCloseEvent *event)
 {
     qDebug()<<"test" ;
