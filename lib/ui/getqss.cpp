@@ -2,7 +2,7 @@
 
 QString getQSS(const std::string & filename)
 {
-    QFile styleFile((":/qss/qss/" + filename).c_str()) ;
+    QFile styleFile((":/qss/" + filename).c_str()) ;
     styleFile.open(QFile::ReadOnly) ;
     QString style(styleFile.readAll()) ;
 

@@ -10,8 +10,9 @@ int main(int argc, char *argv[])
 
     // Setting the font of the application
     QFontDatabase* fontdb = new QFontDatabase() ;
-    fontdb->addApplicationFont("Open Sans") ;
-    app.setFont(QFont("Open Sans", 16));
+    int id = fontdb->addApplicationFont(":/font/OpenSans-Regular.ttf") ;
+    QString family = QFontDatabase::applicationFontFamilies(id).at(0) ;
+    app.setFont(QFont(family, 16)) ;
 
     MainWindow w ;
     w.show() ;
