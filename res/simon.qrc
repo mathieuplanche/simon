@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>font/OpenSans-Regular.ttf</file>
-        <file>font/OpenSans-Bold.ttf</file>
+        <file>fonts/OpenSans-Bold.ttf</file>
+        <file>fonts/OpenSans-Regular.ttf</file>
     </qresource>
 </RCC>
