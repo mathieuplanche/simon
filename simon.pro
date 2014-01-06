@@ -13,10 +13,17 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    lib/ui/mainwindow.cpp
+    lib/ui/mainwindow.cpp \
+    lib/ui/qspushbutton.cpp \
+    lib/ui/getqss.cpp
 
-HEADERS  += lib/ui/mainwindow.h
+HEADERS  += lib/ui/mainwindow.h \
+    lib/ui/qspushbutton.h \
+    lib/ui/getqss.h
     
 
 RESOURCES += res/simon.qrc \
     res/qss.qrc
+
+OTHER_FILES += \
+    res/qss/qsbutton.qss

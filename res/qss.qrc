@@ -1,1 +1,5 @@
-<RCC/>
+<RCC>
+    <qresource prefix="/qss">
+        <file>qss/qsbutton.qss</file>
+    </qresource>
+</RCC>

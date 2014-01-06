@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "lib/ui/qspushbutton.h"
 #include <QLabel>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
@@ -6,6 +7,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
+    setStyleSheet("QWidget {background-color: white}") ;
     QWidget* mainWidget = new QWidget(this) ;
     setCentralWidget(mainWidget) ;
 
@@ -14,9 +16,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     QHBoxLayout* playRecordArea = new QHBoxLayout ;
     mainLayout->addLayout(playRecordArea) ;
-    playButton = new QPushButton("Play") ;
+    playButton = new QSPushButton("Play") ;
     playRecordArea->addWidget(playButton) ;
-    recordButton = new QPushButton("Record") ;
+    recordButton = new QSPushButton("Record") ;
     playRecordArea->addWidget(recordButton) ;
 
     centralArea = new QStackedWidget ;
@@ -24,11 +26,17 @@ MainWindow::MainWindow(QWidget *parent)
 
     QHBoxLayout* addButtonsLayout = new QHBoxLayout ;
     mainLayout->addLayout(addButtonsLayout) ;
-    addFilterButton = new QPushButton("Add Filter") ;
+    addFilterButton = new QSPushButton("Add Filter") ;
     addButtonsLayout->addWidget(addFilterButton) ;
-    addTinnitusButton = new QPushButton("Add Tinnitus") ;
+    addTinnitusButton = new QSPushButton("Add Tinnitus") ;
     addButtonsLayout->addWidget(addTinnitusButton) ;
-    addBackgroundNoiseButton = new QPushButton("Add Background Noise") ;
+    addBackgroundNoiseButton = new QSPushButton("Add Background Noise") ;
     addButtonsLayout->addWidget(addBackgroundNoiseButton) ;
+    // Same sized buttons
+    int m = std::max(addFilterButton->sizeHint().width(), std::max(addTinnitusButton->sizeHint().width(), addBackgroundNoiseButton->sizeHint().width())) ;
+    addFilterButton->setMinimumWidth(m) ;
+    addTinnitusButton->setMinimumWidth(m) ;
+    addBackgroundNoiseButton->setMinimumWidth(m) ;
+
 }
 
