@@ -16,11 +16,6 @@ int main(int argc, char *argv[])
     QFont* font = new QFont(family, 16) ;
     app.setFont(*font) ;
 
-
-    QFontInfo info(app.font());
-    qDebug() <<"font=" << info.family() << "pixelsize=" << info.pointSize() << info.pixelSize() << info.weight() << info.exactMatch();
-
-
     MainWindow w ;
     w.show() ;
 
