@@ -7,6 +7,8 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
+    qDebug() << this->font() ;
+
     setStyleSheet("QWidget {background-color: white}") ;
     QWidget* mainWidget = new QWidget(this) ;
     setCentralWidget(mainWidget) ;
