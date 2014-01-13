@@ -7,6 +7,7 @@
 #include <QPushButton>
 #include <QWidget>
 #include <QStackedWidget>
+#include <QFrame>
 
 class MainWindow : public QMainWindow
 {
@@ -19,7 +20,7 @@ private:
     QPushButton* playButton ;
     QPushButton* recordButton ;
 
-    QStackedWidget* centralArea ;
+    QFrame* centralArea ;
     QWidget* editionArea ;
     QWidget* overviewArea ;
 

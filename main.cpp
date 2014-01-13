@@ -1,12 +1,14 @@
 #include "lib/ui/mainwindow.h"
 #include <QApplication>
 #include <QFontDatabase>
+#include <QIcon>
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv) ;
     app.setOrganizationName("P&G") ;
     app.setApplicationName("simon") ;
+    app.setApplicationVersion("0.1");
 
     // Setting the font of the application
     QFontDatabase* fontdb = new QFontDatabase() ;
@@ -18,6 +20,7 @@ int main(int argc, char *argv[])
 
     MainWindow w ;
     w.show() ;
+    w.setWindowIcon(QIcon(":/icons/simonicon.ico"));
 
     return app.exec() ;
 }

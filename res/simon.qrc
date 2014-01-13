@@ -2,5 +2,9 @@
     <qresource prefix="/">
         <file>fonts/OpenSans-Bold.ttf</file>
         <file>fonts/OpenSans-Regular.ttf</file>
+        <file>icons/simonicon.png</file>
+        <file>icons/simonlogo.png</file>
+        <file>icons/simonicon.ico</file>
+        <file>icons/addsign.png</file>
     </qresource>
 </RCC>
