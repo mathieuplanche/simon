@@ -71,7 +71,12 @@ void QSAddButton::mousePressEvent(QMouseEvent* event)
 
 void QSAddButton::mouseReleaseEvent(QMouseEvent* event)
 {
-    plusSign->setProperty("state", 0);
+    if (rect().contains(event->localPos().toPoint())) {
+        plusSign->setProperty("state", 1);
+    }
+    else {
+        plusSign->setProperty("state", 0);
+    }
     plusSign->style()->unpolish(plusSign);
     plusSign->style()->polish(plusSign);
     plusSign->update();
