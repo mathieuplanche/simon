@@ -10,6 +10,7 @@ QSPushButton::QSPushButton(const QString & text, QWidget *parent) :
     QPushButton(text, parent)
 {
     setStyleSheet(getQSS("qsbutton.qss")) ;
+    setFocusPolicy(Qt::NoFocus) ;
 }
 
 QSAddButton::QSAddButton(const QString &text, QWidget *parent) :
