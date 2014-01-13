@@ -1,6 +1,7 @@
 #include "qsaudiowidget.h"
 
-qsaudiowidget::qsaudiowidget(QWidget *parent) :
-    QWidget(parent)
+QSAudioWidget::QSAudioWidget(QWidget *parent) :
+    QFrame(parent)
 {
+    setStyleSheet("QSAudioWidget {background-color:black}");
 }
