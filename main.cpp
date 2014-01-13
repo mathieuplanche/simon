@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
     QFont* font = new QFont(family, 16) ;
     app.setFont(*font) ;
 
+    app.setStyle("");
+
     MainWindow w ;
     w.show() ;
     w.setWindowIcon(QIcon(":/icons/simonicon.ico"));
