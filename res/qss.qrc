@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>qss/qsbutton.qss</file>
+        <file>qss/qsaddsign.qss</file>
+        <file>qss/qslabel.qss</file>
     </qresource>
 </RCC>
